@@ -1,0 +1,25 @@
+﻿<Window x:Class="UsbFileBlocker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="USB File Blocker" Height="300" Width="500">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Настройки">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Типы файлов для блокировки (например: .docx, .exe)" Margin="0,0,0,5"/>
+                    <TextBox x:Name="FileTypeTextBox" Width="300" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Текст для поиска в файлах (например: конфиденциальная информация)" Margin="0,0,0,5"/>
+                    <TextBox x:Name="FileContentTextBox" Width="300" Margin="0,0,0,10"/>
+
+                    <Button Content="Сохранить настройки" Width="150" Click="SaveSettingsButton_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Мониторинг USB">
+                <StackPanel Margin="10">
+                    <TextBlock Text="USB File Blocker is running..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
